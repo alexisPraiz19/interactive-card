@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+main{
+    display: grid;
+    row-gap: 80px;
+}
+/* cads */
+.card-images{
+    background-image: url(assets/images/bg-main-mobile.png);
+    padding: 15px;
+    padding-top: 30px;
+    height: 233px;
+}
+.card-conteiner .card{
+    width: 270px;
+    height: 150px;
+}
+.back{
+    display: flex;
+    justify-content: end;
+    position: relative;   
+}
+.back .cvc{
+    position: absolute;
+    top: 45%;
+    right: 31px;
+    font-size: 11px;
+    color: hsl(270, 3%, 87%);
+}
+.front{
+    position: relative;
+    top: -34%;
+    z-index: 10;
+}
+.front .card-front{
+    position: relative;
+}
+.card-details{
+    position: absolute;
+    top: 0;
+    width: 270px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    color: hsl(270, 3%, 87%);
+}
+.card-details img{
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+}
+.card-date .card-numers{
+    display: block;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 15px;
+}
+.card-date div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+/* form */
+.form{
+    width: 90%;
+    margin: 0 auto;
+}
+.field .input{
+    width: 100%;
+}
+.field .input-general{
+    padding: 8px 10px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 15px;
+}
+.field .input-general::-webkit-input-placeholder{
+    color: hsl(270, 3%, 87%);
+}
+.field .input-general::-moz-placeholder{
+    color: hsl(270, 3%, 87%);
+}
+.field .input-general:-ms-input-placeholder{
+    color: hsl(270, 3%, 87%);
+}
+.field .input-general::-ms-input-placeholder{
+    color: hsl(270, 3%, 87%);
+}
+.field .input-general::placeholder{
+    color: hsl(270, 3%, 87%);
+}
+.field .input-general:focus{
+    border: 1px solid hsl(278, 94%, 30%);
+}
+.field label{
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.form-content .field-exp{
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+}
+.m-y div{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.m-y div input{
+    width: 50%;
+}
+.btn-send{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+.btn-send:hover{
+    background-color: hsl(278, 68%, 16%);
+}
+.err-message{
+    display: none;
+    font-size: 12px;
+    color: hsl(0, 100%, 66%);
+    margin-bottom: 15px;
+}
+@media screen and (max-width: 340px){
+    .field label{
+        font-size: 11px;
+    }
+}
+
+/* responde desktop */
+@media screen and (min-width: 1000px){
+   /* cards */
+   main{
+       grid-auto-flow: column;
+       height: 100vh;
+       align-items: center;
+       grid-template-columns: 1fr 3fr;
+   }
+   .card-images{
+       background-image: url(assets/images/bg-main-desktop.png);
+       padding: 0;
+       height: 100vh;
+       display: flex;
+       flex-direction: column-reverse;
+       justify-content: center;
+   }
+   .back{
+       margin-top: 20px;
+       transform: translateX(130px);
+}
+    .front{
+       position: relative;
+       top: 0;
+       transform: translateX(40%);
+    }
+
+    /* form */
+
+    .form{
+        width: 40%;
+    }
+}
+
+/* valid form message */
+.valid-form{
+    display: none;   
+}
+.valid-form_active{
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    color: hsl(279, 6%, 55%);
+    transform: scale(0);
+    transition: transform .4s ease;
+}
+.valid-form img{
+    -webkit-filter: drop-shadow(0 0 10px hsl(278, 94%, 30%));
+            filter: drop-shadow(0 0 10px hsl(278, 94%, 30%));
+}
+.valid-form h2{
+    padding: 15px 0;
+}
+.valid-form p{
+    margin-bottom: 30px;
+}
+.form-active{
+    display: flex;
+    flex-direction: column-reverse;
+}

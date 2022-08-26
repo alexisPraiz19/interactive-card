@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive card details</title>
+</head>
+<body>
+
+    <main>
+        <div class="card-images"> 
+            <div class="card-conteiner back">
+                <img src="assets/images/bg-card-back.png" alt="card-back" class="card card-back">
+                <p class="cvc card-cvc">000</p>
+            </div>
+
+            <div class="card-conteiner front">
+                <img src="assets/images/bg-card-front.png" alt="bg-card-front" class="card card-front">
+
+                <div class="card-details">
+                    <img src="assets/images/card-logo.svg" alt="card-logo">
+    
+                    <div class="card-date">
+                        <span class="card-numbers">0000 0000 0000 0000</span>
+                        <div>
+                            <p class="card-name">jane applessed</p>
+                            <span><span class="card-mo">00</span>/<span class="card-ye">00</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+        <form action="#" class="form">
+            <div class="form-content">
+                <div class="field" id="field-name">
+                    <label for="name">cardholder name</label>
+                    <input type="text" id="name" placeholder="e.g Jane Applessed" class="input-general input" name="name" autocomplete="off">
+                    <p class="err-message">the name can only have characters from a to z</p>
+                </div>
+
+                <div class="field" id="field-number">
+                    <label for="number">card number</label>
+                    <input type="text" id="number" placeholder="e.g 1234 5678 9000" class="input-general input" name="number">
+                    <p class="err-message">Enter the 16 digits of your card</p>
+                </div>
+
+                <div class="field field-exp">
+                    <div class="m-y field" id="field-exp">
+                        <label for="m-y">exp. date (mm/yy)</label>
+                        <div>
+                            <input type="text" id="m-y" class="m input-general" placeholder="MM" name="month">
+                            <input type="text" class="y input-general" placeholder="YY" name="year">
+                        </div>
+                        <p class="err-message">Enter month and year of expiration</p>
+                    </div>
+
+                    <div class="field" id="field-cvc">
+                        <label for="cvc">cvc</label>
+                        <input type="text" class="cvc input-general" placeholder="e.g 123" name="cvc">
+                        <p class="err-message">last three digits required</p>
+                    </div>
+                </div>              
+            </div>
+            
+            <button class="btn-send">continue</button>
+
+            <div class="valid-form">
+                <img src="assets/images/icon-complete.svg" alt="icon-complete">
+                <h2>thank you!</h2>
+                <p>We've added your card details</p>
+            </div>
+        </form>
+    </main>
+<script src="index.js"></script>
+</body>
+</html>
